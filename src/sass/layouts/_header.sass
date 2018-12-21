@@ -1,0 +1,39 @@
+.header
+
+	&__content
+		display: flex
+		min-height: 9rem
+		justify-content: space-between
+		align-items: center
+
+	&__contacts
+		display: flex
+		align-items: center
+		font-style: normal
+
+	&__address
+		display: flex
+		align-items: center
+		font-style: normal
+
+	&__number
+		font-size: 2.2rem
+		text-transform: uppercase
+		color: $text-color-dark
+		margin-right: 2.7rem
+
+		// Не придумал как сделать псевдоэлементом
+		// Выбераем первый элемент из двух
+		&:first-child
+			padding-right: 1.3rem
+			border-right: 0.1rem solid #cfcfd0
+			margin-right: 1.3rem
+
+	&__btn
+		display: flex
+		justify-content: center
+		align-items: center
+		
+		&::before
+			content: url(../img/header/telephone.png)
+			margin-right: 0.7rem

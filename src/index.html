@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Добрый картон</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<header class="header">
+		<div class="container header__content">
+			<a class="logo" href="#">
+				<img src="img/header/logo.png" alt="Логотип">
+			</a>
+
+			<div class="header__contacts">
+				<address class="header__address">
+					<p class="header__number">8 (347) 271-54-28</p>
+					<p class="header__number">8 (937) 363-30-00</p>
+				</address>
+				<a class="btn header__btn" href="#">Заказать звонок</a>
+			</div>
+			<!-- /.header__content -->
+		</div>
+		<!-- /.container header__content -->
+	</header>
+	<!-- /.header -->
+
+	<section class="application">
+		<div class="container application__content">
+			<div class="application__img-wrap">
+				<img class="application__img" src="img/application/boxes.png" alt="Коробки">
+			</div>
+
+			<div class="application__text">
+				<header class="application__header">
+					<h1 class="application__title">Производство упаковки из гофрокартона</h1>
+					<span class="application__subtitle"> с доставкой по всей России</span>
+				</header>
+
+				<div class="application__form" action="#">
+					<p class="proposal">Получите индивидуальное предложение на производство и поставку гофропродукции <span class="proposal__sub">образцы упаковки бесплатно!</span></p>
+					<form class="form" action="#">
+						<input class="input input_width" type="tel" placeholder="Введите номер телефона">
+						<button class="btn btn_height" type="submit">Оставить звонок!</button>
+					</form>
+					<p class="note note_margin">*Минимальный заказ 500шт!</s>
+				</div>
+				<!-- /.application__form -->
+			</div>
+			<!-- /.application__text -->
+		</div>
+		<!-- /.container application__content -->
+	</section>
+	<!-- /.application -->
+
+	<div class="overlay">
+		<div class="popup">
+			<header class="popup__header">
+				<h2 class="popup__title">Форма обратной связи</h2>
+			</header>
+
+			<div class="close">&times;</div>
+
+			<div class="popup__form">
+				<p class="proposal">Получите индивидуальное предложение <span class="proposal__sub">на производство и поставку изделий</span></p>
+				<form class="form" action="#">
+					<label class="label" for="phone">Введите ваш номер телефона:</label>
+					<input class="input" name="phone" type="tel" placeholder="+7 (xxx) xxx-xx-xx">
+					<button class="btn btn_height" type="submit">Оставить звонок!</button>
+				</form>
+				<p class="note">*Минимальный заказ 500шт</p>
+			</div>
+			<!-- /.popup__form -->
+		</div>
+		<!-- /.popup -->
+	</div>
+	<!-- /.overlay -->
+
+</body>
+</html>
