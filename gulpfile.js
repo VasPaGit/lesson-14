@@ -17,7 +17,7 @@ var path = {
 		img:     'src/img/**/*',
 		sass:    'src/sass/*.sass',
 		css:     'src/css/*.css',
-		script:  'src/script/*.js',
+		script:  'src/js/*.js',
 	},
 
 	dist: {
@@ -25,7 +25,7 @@ var path = {
 		fonts:   'dist/fonts',
 		img:     'dist/img',
 		css:     'dist/css',
-		script:  'dist/script',
+		script:  'dist/js',
 	},
 
 	watch: {

@@ -1,5 +1,6 @@
 // global
 @import 'global/variables';
+@import 'global/animates';
 
 *, *::after, *::before
 	box-sizing: border-box
@@ -11,17 +12,32 @@ body
 	font-family: 'Roboto', sans-serif
 	margin: 0
 
-// controls
-@import 'controls/labels';
-@import 'controls/input';
-@import 'controls/buttons';
-@import 'controls/popups';
+// wraps
+@import 'wraps/container';
+@import 'wraps/overlay';
+@import 'wraps/wrap';
+
+// forms
+@import 'forms/forms';
+@import 'forms/labels';
+@import 'forms/input';
+@import 'forms/buttons';
 
 // blocks
-@import 'blocks/container';
-@import 'blocks/overlay';
 @import 'blocks/note';
+@import 'blocks/section-header';
+@import 'blocks/about-us';
+@import 'blocks/about-us-block';
+@import 'blocks/features-block';
+@import 'blocks/production-block';
+@import 'blocks/buyers-block';
 
-// layouts
-@import 'layouts/header';
-@import 'layouts/application';
+// modals
+@import 'modals/popups';
+
+// sections
+@import 'sections/header';
+@import 'sections/application';
+@import 'sections/features';
+@import 'sections/production';
+@import 'sections/buyers';
