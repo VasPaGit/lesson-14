@@ -1,0 +1,52 @@
+.slider-for
+	height: 37.7rem
+	width: 53.5rem
+	margin-bottom: 1.3rem
+	overflow: hidden
+
+.slider-nav
+	height: 7.8rem
+	width: 48.1rem
+
+	&__img
+		margin: 0 0.25rem
+
+.slick-list, .slick-track
+	height: inherit
+	width: inherit
+
+.slick-slide
+	outline: none
+
+.prev, .next
+	position: absolute
+	top: 50%
+	transform: translate(0, -50%)
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 2.2rem
+	height: 7.8rem
+	color: $active-color
+	background-color: transparent
+	padding: 0
+	border: 0.1rem solid $btn-color
+	outline: none
+	cursor: pointer
+
+.prev:hover, .next:hover
+	color: $text-color-light
+	background-color: $btn-color
+
+.prev
+	left: -2.5rem
+
+.next
+	right: -2.8rem
+
+.prev__text, .next__text
+	display: inline-block
+	font-size: 4.2rem
+	line-height: 1.5rem
+	font-weight: 400
+	transform: rotateY(76deg)

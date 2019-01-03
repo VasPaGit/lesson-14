@@ -18,6 +18,7 @@ var path = {
 		sass:    'src/sass/*.sass',
 		css:     'src/css/*.css',
 		script:  'src/js/*.js',
+		slick:   'src/slick/**/*',
 	},
 
 	dist: {
@@ -26,6 +27,7 @@ var path = {
 		img:     'dist/img',
 		css:     'dist/css',
 		script:  'dist/js',
+		slick:   'dist/slick'
 	},
 
 	watch: {
@@ -88,13 +90,19 @@ gulp.task('script', function () {
 		.pipe(gulp.dest(path.dist.script));
 });
 
-gulp.task('watch', ['server', 'html', 'sass', 'css', 'img', 'fonts', 'script'], function () {
+gulp.task('slick', function() {
+	gulp.src(path.src.slick)
+		.pipe(gulp.dest(path.dist.slick));
+});
+
+gulp.task('watch', ['server', 'html', 'sass', 'css', 'img', 'fonts', 'script', 'slick'], function () {
 	gulp.watch(path.watch.html,    ['html']);
 	gulp.watch(path.watch.sass,    ['sass']);
 	gulp.watch(path.watch.css,     ['css']);
+	gulp.watch(path.watch.script,  ['script']);
 	gulp.watch(path.src.img,       ['img']);
 	gulp.watch(path.src.fonts,     ['fonts']);
-	gulp.watch(path.watch.script,  ['fonts']);
+	gulp.watch(path.src.slick,     ['slick']);
 });
 
 gulp.task('clear', function (cb) {

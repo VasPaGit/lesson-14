@@ -5,11 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Добрый картон</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 	<header class="header">
 		<div class="container header__content">
 			<a class="logo" href="#">
@@ -79,7 +80,7 @@
 			<!-- /.about-us -->
 
 			<ul class="advantages__list">
-				<li class="advantages__item advantages__item_production wow fadeInUp" data-wow-delay="0s">
+				<li class="advantages__item produce wow fadeInUp" data-wow-delay="0s">
 					<div class="advantages__text">
 						<h3 class="advantages__title">Производство</h3>
 						<p class="advantages__desc">4 технологические линии спо- собны выполнить любой заказ любой сложности</p>
@@ -129,61 +130,94 @@
 	</section>
 	<!-- /.advantages -->
 
-	<section class="production">
+	<section class="produce">
 		<div class="container">
-			<header class="section-header production__header">
+			<header class="section-header produce__header">
 				<h2 class="section-header__title">Наша родукция</h2>
 			</header>
 			
-			<ul class="production__list">
-				<li class="production__item">
-					<div class="production__img">
-						<img src="img/production/img-1.jpg" alt="Гофрокороб">
+			<ul class="produce__list">
+				<li class="produce__item">
+					<div class="produce__img">
+						<img src="img/produce/img-1.jpg" alt="Гофрокороб">
 					</div>
-					<h3 class="production__title">Гофрокороб 4-х клапанный</h3>
+					<h3 class="produce__title">Гофрокороб 4-х клапанный</h3>
 					<div class="form">
-						<button class="btn btn-o production__btn">Подробнее</button>
+						<button class="btn btn-o produce__btn">Подробнее</button>
 						<button class="btn">Получить расчет</button>
 					</div>
 				</li>
 			
-				<li class="production__item">
-					<div class="production__img">
-						<img src="img/production/img-2.jpg" alt="Гофролоток">
+				<li class="produce__item">
+					<div class="produce__img">
+						<img src="img/produce/img-2.jpg" alt="Гофролоток">
 					</div>
-					<h3 class="production__title">Гофролоток</h3>
+					<h3 class="produce__title">Гофролоток</h3>
 					<div class="form">
-						<button class="btn btn-o production__btn">Подробнее</button>
+						<button class="btn btn-o produce__btn">Подробнее</button>
 						<button class="btn">Получить расчет</button>
 					</div>
 				</li>
 			
-				<li class="production__item">
-					<div class="production__img">
-						<img src="img/production/img-3.jpg" alt="Гофрокороб самосборный">
+				<li class="produce__item">
+					<div class="produce__img">
+						<img src="img/produce/img-3.jpg" alt="Гофрокороб самосборный">
 					</div>
-					<h3 class="production__title">Гофрокороб самосборный (сложная высечка)</h3>
+					<h3 class="produce__title">Гофрокороб самосборный (сложная высечка)</h3>
 					<div class="form">
-						<button class="btn btn-o production__btn">Подробнее</button>
+						<button class="btn btn-o produce__btn">Подробнее</button>
 						<button class="btn">Получить расчет</button>
 					</div>
 				</li>
 			
-				<li class="production__item">
-					<div class="production__img">
-						<img src="img/production/img-4.jpg" alt="Листовой гофрокартон">
+				<li class="produce__item">
+					<div class="produce__img">
+						<img src="img/produce/img-4.jpg" alt="Листовой гофрокартон">
 					</div>
-					<h3 class="production__title">Листовой гофрокартон</h3>
+					<h3 class="produce__title">Листовой гофрокартон</h3>
 					<div class="form">
-						<button class="btn btn-o production__btn">Подробнее</button>
+						<button class="btn btn-o produce__btn">Подробнее</button>
 						<button class="btn">Получить расчет</button>
 					</div>
-					<!-- /.formli>
+					<!-- /.form -->
 				</div>
-				<!-- /.production-block -->
+				<!-- /.produce-block -->
 			</ul>
-			<!-- /.wrap -->
+			<!-- /.produce-list -->
 		</div>
+		<!-- /.container -->
+	</section>
+	<!-- /.produce -->
+
+	<section class="production">
+		<div class="container wrap">
+			<div class="production__slider">
+				<div class="slider-for">
+					<img class="slider-for__img" src="img/production/img-1.jpg" alt="Слайд 1">
+					<img class="slider-for__img" src="img/production/img-2.jpg" alt="Слайд 2">
+					<img class="slider-for__img" src="img/production/img-3.jpg" alt="Слайд 3">
+					<img class="slider-for__img" src="img/production/img-4.jpg" alt="Слайд 4">
+					<img class="slider-for__img" src="img/production/img-5.jpg" alt="Слайд 5">
+					<img class="slider-for__img" src="img/production/img-6.jpg" alt="Слайд 6">
+				</div>
+	
+				<div class="slider-nav">
+					<img class="slider-nav__img" src="img/production/img-1.jpg" alt="Слайд 1">
+					<img class="slider-nav__img" src="img/production/img-2.jpg" alt="Слайд 2">
+					<img class="slider-nav__img" src="img/production/img-3.jpg" alt="Слайд 3">
+					<img class="slider-nav__img" src="img/production/img-4.jpg" alt="Слайд 4">
+					<img class="slider-nav__img" src="img/production/img-5.jpg" alt="Слайд 5">
+					<img class="slider-nav__img" src="img/production/img-6.jpg" alt="Слайд 6">
+				</div>
+			</div>
+	
+			<div class="production__content">
+				<h2 class="production__title">Производство</h2>
+				<p class="production__text">Современное оборудование позволяет произ- водить до 5 миллионов квадратных метров гофрокартона ежемесячно. Гофрокороба и лотки производятся по ГОСТу или чертежам заказчика. Досконально прорабатываем конструкции коро- бов и составы сырья, учитывая условия хранения, транспортировки и производства вашей продукции. Возможно нанесение цветной флексопечати на поверхность коробов.</p>
+			</div>
+			<!-- /.slider -->
+		</div>
+		<!-- /.container wrap -->
 	</section>
 	<!-- /.production -->
 
@@ -236,24 +270,41 @@
 	</div>
 	<!-- /.overlay -->
 
+
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/script.js"></script>
+
+	<!-- Wow -->
 	<script src="js/wow.min.js"></script>
 	<script>
 		new WOW().init();
 	</script>
-	
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+	<!-- Slick -->
+	<script src="slick/slick.min.js"></script>
 	<script>
-		$(document).ready(function(){
-
-			$('.header__btn').on('click', function(){
-				$('.overlay').show();
-			});
-
-			$('.close').on('click', function(){
-				$('.overlay').hide();
-
-			});
+	$(document).ready(function(){
+		$('.slider-for').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			asNavFor: '.slider-nav',
+			fade: true,
+			arrows: false
 		});
+
+		$('.slider-nav').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			asNavFor: '.slider-for',
+			centerMode: true,
+			centerPadding: '0px',
+			focusOnSelect: true,
+			prevArrow: '<button class="prev"><span class="prev__text">&lt;</span></button>',
+			nextArrow: '<button class="next"><span class="next__text">&gt;</span></button>'
+		});
+	});
 	</script>
 </body>
 </html>
