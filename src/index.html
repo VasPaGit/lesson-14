@@ -11,28 +11,42 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<nav class="menu hidden-mobile">
+		<div class="container">
+			<ul class="menu__list">
+				<li class="menu__item"><a class="menu__text menu__first-text" href="#application">О компании</a></li>
+				<li class="menu__item"><a class="menu__text" href="#advantages">Преимущества</a></li>
+				<li class="menu__item"><a class="menu__text" href="#production">Производство</a></li>
+				<li class="menu__item"><a class="menu__text" href="#offer">Склад</a></li>
+				<li class="menu__item"><a class="menu__text" href="#produce">Продукция</a></li>
+				<li class="menu__item"><a class="menu__text" href="#buyers">Наши клиенты</a></li>
+				<li class="menu__item"><a class="menu__text" href="#certificat">Сертификаты</a></li>
+				<li class="menu__item"><a class="menu__text" href="#feedback">Отзывы</a></li>
+				<li class="menu__item"><a class="menu__text menu__last-text" href="#contacts">Контакты</a></li>
+			</ul>
+		</div>
+	</nav>
+
 	<header class="header">
 		<div class="container header__content">
-			<a class="logo" href="#">
-				<img src="img/header/logo.png" alt="Логотип">
-			</a>
+			<a class="logo" href="#"></a>
 
 			<div class="header__contacts">
 				<address class="header__address">
-					<p class="header__number">8 (347) 271-54-28</p>
-					<p class="header__number">8 (937) 363-30-00</p>
+					<p class="header__number">8 (347) <span>271-54-28</span></p>
+					<p class="header__number">8 (937) <span>363-30-00</span></p>
 				</address>
-				<a class="btn header__btn" href="#">Заказать звонок</a>
+				<a class="btn header__btn" href="#"><span>Заказать звонок</span></a>
 			</div>
-			<!-- /.header__content -->
+			<!-- /.header__contacts -->
 		</div>
 		<!-- /.container header__content -->
 	</header>
 	<!-- /.header -->
 
-	<section class="application">
+	<section class="application brownout" id="application">
 		<div class="container application__content">
-			<a class="application__img-wrap myFadeInUp" href="#">
+			<a class="application__img-wrap myFadeInUp hidden-mobile" href="#">
 				<img class="application__img" src="img/application/boxes.png" alt="Коробки">
 			</a>
 
@@ -45,7 +59,7 @@
 				<div class="application__form-wrapper">
 					<p class="application__proposal">Получите индивидуальное предложение на производство и поставку гофропродукции <span class="application__proposal-sub">образцы упаковки бесплатно!</span></p>
 					<form class="form application__form" action="#">
-						<input class="input input_width application__input" type="tel" placeholder="Введите номер телефона">
+						<input class="input input_big application__input" type="tel" placeholder="Введите номер телефона">
 						<button class="btn btn_big application__btn" type="submit">Оставить звонок!</button>
 					</form>
 					<div class="note application__note">*Минимальный заказ 500шт!</div>
@@ -56,9 +70,9 @@
 		</div>
 		<!-- /.container application__content -->
 	</section>
-	<!-- /.application -->
+	<!-- /.application brownout -->
 
-	<section class="advantages">
+	<div class="section advantages" id="advantages">
 		<div class="container">
 			<ul class="about-us">
 				<li class="about-us__item">
@@ -80,7 +94,7 @@
 			<!-- /.about-us -->
 
 			<ul class="advantages__list">
-				<li class="advantages__item produce wow fadeInUp" data-wow-delay="0s">
+				<li class="advantages__item wow fadeInUp" data-wow-delay="0s">
 					<div class="advantages__text">
 						<h3 class="advantages__title">Производство</h3>
 						<p class="advantages__desc">4 технологические линии спо- собны выполнить любой заказ любой сложности</p>
@@ -127,10 +141,10 @@
 			<!-- /.advantages__list -->
 		</div>
 		<!-- /.container -->
-	</section>
-	<!-- /.advantages -->
+	</div>
+	<!-- /.section advantages -->
 
-	<section class="produce">
+	<section class="produce" id="produce">
 		<div class="container">
 			<header class="section-header produce__header">
 				<h2 class="section-header__title">Наша родукция</h2>
@@ -138,8 +152,8 @@
 			
 			<ul class="produce__list">
 				<li class="produce__item">
-					<div class="produce__img">
-						<img src="img/produce/img-1.jpg" alt="Гофрокороб">
+					<div class="produce__img produce__img_valvular">
+						<!-- <img src="img/produce/img-1.jpg" alt="Гофрокороб"> -->
 					</div>
 					<h3 class="produce__title">Гофрокороб 4-х клапанный</h3>
 					<div class="form">
@@ -149,8 +163,8 @@
 				</li>
 			
 				<li class="produce__item">
-					<div class="produce__img">
-						<img src="img/produce/img-2.jpg" alt="Гофролоток">
+					<div class="produce__img produce__img_">
+						<!-- <img src="img/produce/img-2.jpg" alt="Гофролоток"> -->
 					</div>
 					<h3 class="produce__title">Гофролоток</h3>
 					<div class="form">
@@ -160,8 +174,8 @@
 				</li>
 			
 				<li class="produce__item">
-					<div class="produce__img">
-						<img src="img/produce/img-3.jpg" alt="Гофрокороб самосборный">
+					<div class="produce__img produce__img_">
+						<!-- <img src="img/produce/img-3.jpg" alt="Гофрокороб самосборный"> -->
 					</div>
 					<h3 class="produce__title">Гофрокороб самосборный (сложная высечка)</h3>
 					<div class="form">
@@ -171,8 +185,8 @@
 				</li>
 			
 				<li class="produce__item">
-					<div class="produce__img">
-						<img src="img/produce/img-4.jpg" alt="Листовой гофрокартон">
+					<div class="produce__img produce__img_">
+						<!-- <img src="img/produce/img-4.jpg" alt="Листовой гофрокартон"> -->
 					</div>
 					<h3 class="produce__title">Листовой гофрокартон</h3>
 					<div class="form">
@@ -189,7 +203,24 @@
 	</section>
 	<!-- /.produce -->
 
-	<section class="production">
+	<div class="section offer brownout" id="offer">
+		<div class="container">
+			<div class="offer__text">
+				<p class="offer__proposal">Получите индивидуальное предложение <span class="offer-content__proposal-sub">на производство ипоставку изделий</span></p>
+				<form class="form offer__form" action="#">
+					<label class="label offer__label" for="phone">Введите ваш номер телефона:</label>
+					<input class="input offer__input" id="phone" type="tel" placeholder="+7 (xxx) xxx-xx-xx">
+					<button class="btn btn_big" type="submit">Оставить звонок!</button>
+				</form>
+				<p class="note">*Минимальный заказ 500шт</p>
+			</div>
+			<!-- /.offer__text -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.section offer brownout -->
+
+	<section class="production" id="production">
 		<div class="container wrap">
 			<div class="production__slider">
 				<div class="slider-for">
@@ -213,7 +244,9 @@
 	
 			<div class="production__content">
 				<h2 class="production__title">Производство</h2>
-				<p class="production__text">Современное оборудование позволяет произ- водить до 5 миллионов квадратных метров гофрокартона ежемесячно. Гофрокороба и лотки производятся по ГОСТу или чертежам заказчика. Досконально прорабатываем конструкции коро- бов и составы сырья, учитывая условия хранения, транспортировки и производства вашей продукции. Возможно нанесение цветной флексопечати на поверхность коробов.</p>
+				<p class="production__text">Современное оборудование позволяет произ- водить до 5 миллионов квадратных метров гофрокартона ежемесячно. Гофрокороба и лотки производятся по ГОСТу или чертежам заказчика.</p>
+				<p class="production__text">Досконально прорабатываем конструкции коро- бов и составы сырья, учитывая условия хранения, транспортировки и производства вашей продукции.</p>
+				<p class="production__text">Возможно нанесение цветной флексопечати на поверхность коробов.</p>
 			</div>
 			<!-- /.slider -->
 		</div>
@@ -221,7 +254,7 @@
 	</section>
 	<!-- /.production -->
 
-	<section class="buyers">
+	<section class="buyers" id="buyers">
 		<div class="container">
 			<div class="section-header buyers__header">
 				<h2 class="section-header__title">Наши клиенты</h2>
@@ -247,6 +280,26 @@
 	</section>
 	<!-- /.buyers -->
 
+	<section class="feedback"	id="feedback">
+		<div class="container">
+			<div class="section-header feedback__header">
+				<h2 class="section-header__title">Отзывы о сотрудничестве</h2>
+			</div>
+
+			<div class="slider">
+				<div class="slider__item"><img class="sleder__img" src="img/feedback/img-1.jpg" alt="Слайд 1"></div>
+				<div class="slider__item"><img class="sleder__img" src="img/feedback/img-2.jpg" alt="Слайд 2"></div>
+				<div class="slider__item"><img class="sleder__img" src="img/feedback/img-3.jpg" alt="Слайд 3"></div>
+				<div class="slider__item"><img class="sleder__img" src="img/feedback/img-1.jpg" alt="Слайд 1"></div>
+				<div class="slider__item"><img class="sleder__img" src="img/feedback/img-2.jpg" alt="Слайд 2"></div>
+				<div class="slider__item"><img class="sleder__img" src="img/feedback/img-3.jpg" alt="Слайд 3"></div>
+			</div>
+			<!-- /.slider -->
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- /.feedback -->
+
 	<div class="overlay">
 		<div class="popup">
 			<header class="popup__header">
@@ -258,7 +311,7 @@
 			<div class="popup__text">
 				<p class="popup__proposal">Получите индивидуальное предложение <span class="popup__proposal-sub">на производство и поставку изделий</span></p>
 				<form class="form popup__form" action="#">
-					<label class="label" for="phone">Введите ваш номер телефона:</label>
+					<label class="label popup__label" for="phone">Введите ваш номер телефона:</label>
 					<input class="input popup__input" id="phone" type="tel" placeholder="+7 (xxx) xxx-xx-xx">
 					<button class="btn btn_big" type="submit">Оставить звонок!</button>
 				</form>
@@ -269,7 +322,6 @@
 		<!-- /.popup -->
 	</div>
 	<!-- /.overlay -->
-
 
 
 	<!-- jquery -->
@@ -301,8 +353,24 @@
 			centerMode: true,
 			centerPadding: '0px',
 			focusOnSelect: true,
-			prevArrow: '<button class="prev"><span class="prev__text">&lt;</span></button>',
-			nextArrow: '<button class="next"><span class="next__text">&gt;</span></button>'
+			prevArrow: '<button class="prev slider-nav__prev"><span class="slider-nav__text">&lt;</span></button>',
+			nextArrow: '<button class="next slider-nav__next"><span class="slider-nav__text">&gt;</span></button>'
+		});
+
+		$('.slider').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			infinite: true,
+			prevArrow: '<button class="prev slider__prev"><img src="img/prev.png" alt="next"></button>',
+			nextArrow: '<button class="next slider__next"><img src="img/next.png" alt="next"></button>'
+			// responsive: [
+			// 	{
+			// 		beakpoint: 575,
+			// 		settings: {
+			// 			slidesToShow: 1
+			// 		},
+			// 	}
+			// ]
 		});
 	});
 	</script>

@@ -1,0 +1,129 @@
+@media (max-width: 576px)
+
+	.hidden-mobile
+		display: none
+
+	.container
+		padding: 0 1.5rem
+
+	.section-header
+		
+		&__title
+			font-size: 2.2rem
+
+			&::after
+				display: none
+
+	.header
+		margin-top: 0
+
+		&__content
+			min-height: 5.6rem
+
+		&__address
+			flex-flow: column nowrap
+
+		&__number
+			font-size: 1.4rem
+			margin: 0
+
+			&:first-child
+				padding: 0
+				border: 0
+				margin: 0
+
+			span
+				font-weight: 900
+
+		&__btn
+			height: 2.7rem
+			width: 2.7rem
+			margin-left: 1.5rem
+
+			&::before
+				height: 1.4rem
+				width: 1.4rem
+				margin-right: 0
+
+			span
+				display: none
+
+	.logo
+		height: 3.5rem
+		width: 3.5rem
+		background: $active-color url(../img/logo-mobile.png) center no-repeat
+		border-radius: 0.4rem
+
+	.application
+		padding: 5rem 0 5.8rem 0
+
+		&__text
+			text-align: center
+			width: 100%
+			margin: 0
+
+		&__title
+			font-size: 2.2rem
+			line-height: 2.4rem
+			color: $active-color
+
+		&__subtitle
+			font-size: 1.8rem
+
+		&__form-wrapper
+			padding: 0
+			background-color: transparent
+
+		&__proposal
+			font-size: 1.5rem
+			font-weight: 300
+			line-height: 1.8rem
+			margin-bottom: 1.5rem
+
+		&__proposal-sub
+			display: block
+			font-weight: 700
+			text-transform: uppercase
+			margin-top: 1.5rem
+
+		&__form
+			flex-flow: column nowrap
+			align-items: center
+
+		&__input
+			text-align: center
+			margin: 0 0 1.3rem 0
+
+	.advantages
+		padding: 2.4rem 0 1rem 0
+
+		&__list
+			justify-content: center
+
+		&__item
+			margin-bottom: 0.8rem
+
+	.about-us
+		flex-flow: column nowrap
+		margin: 0
+
+		&__item
+			margin-bottom: 2.4rem
+
+		&__numbers
+			font-size: $media576-about-us-item_font-size
+
+			sup
+				font-size: $media576-about-us-item_font-size / 2
+
+		&__number-sub
+			font-size: 1.3rem
+
+	.produce
+		padding-top: 3.2rem
+		width: 100%
+
+		&__list
+			justify-content: center
+
+		&__item

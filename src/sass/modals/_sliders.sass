@@ -11,13 +11,44 @@
 	&__img
 		margin: 0 0.25rem
 
+	&__text
+		font-size: 4.2rem
+		line-height: 1.5rem
+		font-weight: 400
+		transform: rotateY(76deg)
+
+
+.slider
+	width: 87.7rem
+	margin: 0 auto
+
+	&__item
+		width: 27.4rem
+		height: 37.7rem
+		border: 0.1rem solid rgba(0, 0, 0, 0.1)
+		margin: 0 1.35rem
+		background-color: #fff
+
+	&__text
+		font-size: 10.2rem
+		font-weight: 400
+		transform: rotateY(76deg)
+
+.slider-nav__text, .slider__text
+		display: inline-block
+
+// SLICK-SLIDER
 .slick-list, .slick-track
 	height: inherit
 	width: inherit
 
-.slick-slide
+.slick-initialized .slick-slide
+	display: flex
+	justify-content: center
+	align-items: center
 	outline: none
 
+// BUTTON
 .prev, .next
 	position: absolute
 	top: 50%
@@ -25,18 +56,12 @@
 	display: flex
 	justify-content: center
 	align-items: center
-	width: 2.2rem
-	height: 7.8rem
 	color: $active-color
 	background-color: transparent
 	padding: 0
-	border: 0.1rem solid $btn-color
+	border: 0.1rem solid $active-color
 	outline: none
 	cursor: pointer
-
-.prev:hover, .next:hover
-	color: $text-color-light
-	background-color: $btn-color
 
 .prev
 	left: -2.5rem
@@ -44,9 +69,15 @@
 .next
 	right: -2.8rem
 
-.prev__text, .next__text
-	display: inline-block
-	font-size: 4.2rem
-	line-height: 1.5rem
-	font-weight: 400
-	transform: rotateY(76deg)
+.slider-nav__prev, .slider-nav__next
+	width: 2.2rem
+	height: 7.8rem
+
+.slider-nav__prev:hover, .slider-nav__next:hover
+	color: $text-color-light
+	background-color: $active-color
+
+.slider__prev, .slider__next
+	height: 100%
+	width: 2rem
+	border: 0

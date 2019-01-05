@@ -1,0 +1,40 @@
+.menu
+	position: fixed
+	top: 0
+	left: 0
+	height: 4.4rem
+	width: 100%
+	background-color: $menu_bg-color
+	z-index: 99
+
+	&__list
+		display: flex
+		justify-content: center
+		align-items: center
+		height: inherit
+		margin: 0
+		padding: 0
+		list-style: none
+
+	&__item
+		height: 2.5rem
+		font-size: 1.2rem
+		font-weight: 400
+		text-transform: uppercase
+		color: #fff
+
+	&__text
+		display: flex
+		align-items: center
+		height: inherit
+		text-decoration: none
+		color: #fff
+		padding: 0 1.45rem
+		border-right: 0.1rem dotted rgba(255,255,255,0.2)
+
+	&__first-text
+		padding-left: 0
+
+	&__last-text
+		padding-right: 0
+		border: 0
