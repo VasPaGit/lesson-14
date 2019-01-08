@@ -7,8 +7,7 @@
 	<title>Добрый картон</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="slick/slick.css">
-	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,8 +24,11 @@
 				<li class="menu__item"><a class="menu__text" href="#feedback">Отзывы</a></li>
 				<li class="menu__item"><a class="menu__text menu__last-text" href="#contacts">Контакты</a></li>
 			</ul>
+			<!-- /.menu__list -->
 		</div>
+		<!-- /.container -->
 	</nav>
+	<!-- /.menu hidden-mobile -->
 
 	<header class="header">
 		<div class="container header__content">
@@ -226,7 +228,8 @@
 			<div class="production__slider">
 				<div class="slider-for">
 					<img class="slider-for__img" src="img/production/img-1.jpg" alt="Слайд 1">
-					<img class="slider-for__img" src="img/production/img-2.jpg" alt="Слайд 2">
+					<div class="img-1"></div>
+					<!-- <img class="slider-for__img" src="img/production/img-2.jpg" alt="Слайд 2"> -->
 					<img class="slider-for__img" src="img/production/img-3.jpg" alt="Слайд 3">
 					<img class="slider-for__img" src="img/production/img-4.jpg" alt="Слайд 4">
 					<img class="slider-for__img" src="img/production/img-5.jpg" alt="Слайд 5">
@@ -249,7 +252,7 @@
 				<p class="production__text">Досконально прорабатываем конструкции коро- бов и составы сырья, учитывая условия хранения, транспортировки и производства вашей продукции.</p>
 				<p class="production__text">Возможно нанесение цветной флексопечати на поверхность коробов.</p>
 			</div>
-			<!-- /.slider -->
+			<!-- /.production__content -->
 		</div>
 		<!-- /.container production__wrapper -->
 	</section>
@@ -326,7 +329,7 @@
 
 
 	<!-- jquery -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="js/script.js"></script>
 
 	<!-- Wow -->
@@ -336,7 +339,7 @@
 	</script>
 
 	<!-- Slick -->
-	<script src="slick/slick.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script>
 	$(document).ready(function(){
 		$('.slider-for').slick({
@@ -344,8 +347,7 @@
 			slidesToScroll: 1,
 			asNavFor: '.slider-nav',
 			fade: true,
-			arrows: false,
-			variableWidth: true
+			arrows: false
 		});
 
 		$('.slider-nav').slick({
@@ -355,7 +357,7 @@
 			centerMode: true,
 			centerPadding: '0px',
 			focusOnSelect: true,
-			arrows: false,
+			arrows: true,
 			prevArrow: '<button class="prev slider-nav__prev"><span class="slider-nav__text">&lt;</span></button>',
 			nextArrow: '<button class="next slider-nav__next"><span class="slider-nav__text">&gt;</span></button>'
 		});
