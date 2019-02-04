@@ -2,22 +2,23 @@
 	max-width: 53.5rem
 	width: 100%
 	background-color: #fff
+	overflow: hidden
+
+.slider-for__img, .slider-nav__img
+	height: inherit
+	width: inherit
+	object-fit: cover
 	
 .slider-for
 	height: 37.7rem
 	margin-bottom: 1.3rem
-	overflow: hidden
-
-	&__img
-		object-fit: cover
 
 .slider-nav
 	height: 7.8rem
 	padding: 0 2.5rem
 
-	&__img
+	&__img-wrapper
 		margin: 0 0.25rem
-		overflow: hidden
 
 	&__text
 		font-size: 4.2rem
@@ -52,7 +53,7 @@
 .prev, .next
 	position: absolute
 	top: 50%
-	transform: translate(0, -50%)
+	transform: translate(0,-50%)
 	display: flex
 	justify-content: center
 	align-items: center
