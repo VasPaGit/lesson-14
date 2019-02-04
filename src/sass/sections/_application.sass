@@ -1,7 +1,14 @@
+.no-webp .application
+	background-image: url('../img/application/bg-application.jpg')
+
+.webp .application
+	background-image: url('../img/application/bg-application.webp')
+	
 .application
 	color: $text-color-light
 	padding: 7.1rem 0 7.8rem 0
-	background: $bg-color-dark url(../img/application/bg-application.jpg) center no-repeat
+	background-color: $bg-color-dark
+	background-position: center
 	background-size: cover
 
 	&__content

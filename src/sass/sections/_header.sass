@@ -23,8 +23,6 @@
 		color: $text-color-dark
 		margin-right: 2.7rem
 
-		// Не придумал как сделать псевдоэлементом
-		// Выбераем первый элемент из двух
 		&:first-child
 			padding-right: 1.3rem
 			border-right: 0.1rem solid #cfcfd0
@@ -35,10 +33,13 @@
 		justify-content: center
 		align-items: center
 		
-		&::before
-			content: ''
-			height: 2rem
-			width: 2rem
-			background: url(../img/header/telephone.png) center no-repeat
-			background-size: 100%
-			margin-right: 0.7rem
+.header__btn::before
+	height: 2rem
+	width: 2rem
+	margin-right: 0.7rem
+
+.no-webp .header__btn::before
+	content: url('../img/header/telephone.png')
+
+.webp .header__btn::before
+	content: url('../img/header/telephone.webp')

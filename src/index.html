@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-webp" lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<title>Добрый картон</title>
+
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
+	<!-- font -->
 	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="css/style.css">
+	<!-- css -->
+	<script src="js/modernizr-webp.js"></script>
+	<script>
+		document.documentElement.classList.remove("no-webp");
+	</script>
+	<!-- script -->
 </head>
 <body>
 	<nav class="menu hidden-mobile">
@@ -32,7 +39,12 @@
 
 	<header class="header">
 		<div class="container header__content">
-			<a class="logo" href="#"></a>
+			<a class="logo-wrapper" href="#">
+				<picture>
+					<source class="logo" srcset="img/logo.webp" type="image/webp">
+					<img class="logo" src="img/logo.png" alt="Логотип сайта "Добрый картон"">
+				</picture>
+			</a>
 
 			<div class="header__contacts">
 				<address class="header__address">
@@ -50,7 +62,10 @@
 	<section class="application brownout" id="application">
 		<div class="container application__content">
 			<a class="application__img-wrap myFadeInUp hidden-mobile" href="#">
-				<img class="application__img" src="img/application/boxes.png" alt="Коробки">
+				<picture>
+					<source class="application__img" srcset="img/application/boxes.webp" type="image/webp">
+					<img class="application__img" src="img/application/boxes.png" alt="Гора каробк">
+				</picture>
 			</a>
 
 			<div class="application__text">
@@ -155,9 +170,10 @@
 			
 			<ul class="produce__list">
 				<li class="produce__item">
-					<div class="produce__img">
+					<picture class="produce__img">
+						<source srcset="img/produce/img-1.webp" type="image/webp">
 						<img src="img/produce/img-1.jpg" alt="Гофрокороб">
-					</div>
+					</picture>
 					<h3 class="produce__title">Гофрокороб 4-х клапанный</h3>
 					<div class="form produce__form">
 						<button class="btn btn-o produce__btn-o produce__btn-o_margin">Подробнее</button>
@@ -166,9 +182,10 @@
 				</li>
 			
 				<li class="produce__item">
-					<div class="produce__img">
+					<picture class="produce__img">
+						<source srcset="img/produce/img-2.webp" type="image/webp">
 						<img src="img/produce/img-2.jpg" alt="Гофролоток">
-					</div>
+					</picture>
 					<h3 class="produce__title">Гофролоток</h3>
 					<div class="form produce__form">
 						<button class="btn btn-o produce__btn-o produce__btn-o_margin">Подробнее</button>
@@ -177,9 +194,10 @@
 				</li>
 			
 				<li class="produce__item">
-					<div class="produce__img">
+					<picture class="produce__img">
+						<source srcset="img/produce/img-3.webp" type="image/webp">
 						<img src="img/produce/img-3.jpg" alt="Гофрокороб самосборный">
-					</div>
+					</picture>
 					<h3 class="produce__title">Гофрокороб самосборный (сложная высечка)</h3>
 					<div class="form produce__form">
 						<button class="btn btn-o produce__btn-o produce__btn-o_margin">Подробнее</button>
@@ -188,9 +206,10 @@
 				</li>
 			
 				<li class="produce__item">
-					<div class="produce__img">
+					<picture class="produce__img">
+						<source srcset="img/produce/img-4.webp" type="image/webp">
 						<img src="img/produce/img-4.jpg" alt="Листовой гофрокартон">
-					</div>
+					</picture>
 					<h3 class="produce__title">Листовой гофрокартон</h3>
 					<div class="form produce__form">
 						<button class="btn btn-o produce__btn-o produce__btn-o_margin">Подробнее</button>
@@ -228,8 +247,7 @@
 			<div class="production__slider">
 				<div class="slider-for">
 					<img class="slider-for__img" src="img/production/img-1.jpg" alt="Слайд 1">
-					<div class="img-1"></div>
-					<!-- <img class="slider-for__img" src="img/production/img-2.jpg" alt="Слайд 2"> -->
+					<img class="slider-for__img" src="img/production/img-2.jpg" alt="Слайд 2">
 					<img class="slider-for__img" src="img/production/img-3.jpg" alt="Слайд 3">
 					<img class="slider-for__img" src="img/production/img-4.jpg" alt="Слайд 4">
 					<img class="slider-for__img" src="img/production/img-5.jpg" alt="Слайд 5">
@@ -237,12 +255,12 @@
 				</div>
 	
 				<div class="slider-nav hidden-mobile">
-					<img class="slider-nav__img" src="img/production/img-1.jpg" alt="Слайд 1">
-					<img class="slider-nav__img" src="img/production/img-2.jpg" alt="Слайд 2">
-					<img class="slider-nav__img" src="img/production/img-3.jpg" alt="Слайд 3">
-					<img class="slider-nav__img" src="img/production/img-4.jpg" alt="Слайд 4">
-					<img class="slider-nav__img" src="img/production/img-5.jpg" alt="Слайд 5">
-					<img class="slider-nav__img" src="img/production/img-6.jpg" alt="Слайд 6">
+				<img class="slider-nav__img" src="img/production/img-1.jpg" alt="Слайд 1">
+				<img class="slider-nav__img" src="img/production/img-2.jpg" alt="Слайд 2">
+				<img class="slider-nav__img" src="img/production/img-3.jpg" alt="Слайд 3">
+				<img class="slider-nav__img" src="img/production/img-4.jpg" alt="Слайд 4">
+				<img class="slider-nav__img" src="img/production/img-5.jpg" alt="Слайд 5">
+				<img class="slider-nav__img" src="img/production/img-6.jpg" alt="Слайд 6">
 				</div>
 			</div>
 	
@@ -265,18 +283,114 @@
 			</div>
 
 			<ul class="buyers__list">
-				<li class="buyers__item"><a href="#"><img src="img/buyers/img-1.jpg" alt="Восход"></a></li>
-				<li class="buyers__item"><a href="#"><img src="img/buyers/img-2.jpg" alt="Стерх"></a></li>
-				<li class="buyers__item"><a href="#"><img src="img/buyers/img-3.jpg" alt="Серебренный снег"></a></li>
-				<li class="buyers__item"><a href="#"><img src="img/buyers/img-4.jpg" alt="Авдон"></a></li>
-				<li class="buyers__item"><a href="#"><img src="img/buyers/img-5.jpg" alt="Турбаслинские бойлеры"></a></li>
-				<li class="buyers__item"><a href="#"><img src="img/buyers/img-6.jpg" alt="Башкирское мороженое"></a></li>
-				<li class="buyers__item"><a href="#"><img src="img/buyers/img-7.jpg" alt="Аллат"></a></li>
-				<li class="buyers__item"><a href="#"><img src="img/buyers/img-8.jpg" alt="Альтернатива изделия из пласмасс"></a></li>
-				<li class="buyers__item"><a href="#"><img src="img/buyers/img-9.jpg" alt="Индюшкин"></a></li>
-				<li class="buyers__item"><a href="#"><img src="img/buyers/img-10.jpg" alt="Салават Стекло"></a></li>
-				<li class="buyers__item"><a href="#"><img src="img/buyers/img-11.jpg" alt="Молочный фермер"></a></li>
-				<li class="buyers__item"><a href="#"><img src="img/buyers/img-12.jpg" alt="Меги"></a></li>
+				<li class="buyers__item">
+					<a href="#">
+						<picture>
+							<source srcset="img/buyers/img-1.webp" type="image/webp">
+							<img src="img/buyers/img-1.jpg" alt="Восход">
+						</picture>
+					</a>
+				</li>
+
+				<li class="buyers__item">
+					<a href="#">
+						<picture>
+							<source srcset="img/buyers/img-2.webp" type="image/webp">
+							<img src="img/buyers/img-2.jpg" alt="Стерх">
+						</picture>
+					</a>
+				</li>
+
+				<li class="buyers__item">
+					<a href="#">
+						<picture>
+							<source srcset="img/buyers/img-3.webp" type="image/webp">
+							<img src="img/buyers/img-3.jpg" alt="Серебренный снег">
+						</picture>
+					</a>
+				</li>
+
+				<li class="buyers__item">
+					<a href="#">
+						<picture>
+							<source srcset="img/buyers/img-4.webp" type="image/webp">
+							<img src="img/buyers/img-4.jpg" alt="Авдон">
+						</picture>
+					</a>
+				</li>
+
+				<li class="buyers__item">
+					<a href="#">
+						<picture>
+							<source srcset="img/buyers/img-5.webp" type="image/webp">
+							<img src="img/buyers/img-5.jpg" alt="Турбаслинские бойлеры">
+						</picture>
+					</a>
+				</li>
+
+				<li class="buyers__item">
+					<a href="#">
+						<picture>
+							<source srcset="img/buyers/img-6.webp" type="image/webp">
+							<img src="img/buyers/img-6.jpg" alt="Башкирское мороженое">
+						</picture>
+					</a>
+				</li>
+
+				<li class="buyers__item">
+					<a href="#">
+						<picture>
+							<source srcset="img/buyers/img-7.webp" type="image/webp">
+							<img src="img/buyers/img-7.jpg" alt="Аллат">
+						</picture>
+					</a>
+				</li>
+
+				<li class="buyers__item">
+					<a href="#">
+						<picture>
+							<source srcset="img/buyers/img-8.webp" type="image/webp">
+							<img src="img/buyers/img-8.jpg" alt="Альтернатива изделия из пласмасс">
+						</picture>
+					</a>
+				</li>
+
+				<li class="buyers__item">
+					<a href="#">
+						<picture>
+							<source srcset="img/buyers/img-9.webp" type="image/webp">
+							<img src="img/buyers/img-9.jpg" alt="Индюшкин">
+						</picture>
+					</a>
+				</li>
+
+				<li class="buyers__item">
+					<a href="#">
+						<picture>
+							<source srcset="img/buyers/img-10.webp" type="image/webp">
+							<img src="img/buyers/img-10.jpg" alt="Салават Стекло">
+						</picture>
+					</a>
+				</li>
+
+				<li class="buyers__item">
+					<a href="#">
+						<picture>
+							<source srcset="img/buyers/img-11.webp" type="image/webp">
+							<img src="img/buyers/slider-for__img.jpg" alt="Молочный фермер">
+						</picture>
+					</a>
+				</li>
+
+				<li class="buyers__item">
+					<a href="#">
+						<picture>
+							<source srcset="img/buyers/img-12.webp" type="image/webp">
+							<img src="img/buyers/img-12.jpg" alt="Меги">
+						</picture>
+					</a>
+				</li>
+				<!-- /.buyers__item -->
 			</ul>
 			<!-- /.buyers__list -->
 		</div>
@@ -327,18 +441,45 @@
 	</div>
 	<!-- /.overlay -->
 
+<div class="video video_enabled">
+	<a class="video__link" href="https://www.youtube.com/watch?v=4JS70KB9GS0&t=721s" target="_blank">
+		<picture>
+			<source srcset="https://i.ytimg.com/vi_webp/4JS70KB9GS0/maxresdefault.webp" type="image/webp">
+			<img class="video__media" src="https://i.ytimg.com/vi/4JS70KB9GS0/maxresdefault.jpg" alt="12. Как вставить двадцать видео с Ютуба и не скачать слона">
+		</picture>
+		<button class="video__button" aria-label="Запустить видео">
+			<svg width="68" height="48" viewBox="0 0 68 48">
+				<path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+				<path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+			</svg>
+		</button>
+	</a>
+</div>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- jquery -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<script src="js/script.js"></script>
 
-	<!-- Wow -->
+	<script>
+		$(document).ready(function () {
+			
+			$('.header__btn').on('click', function () {
+				$('.overlay').show();
+			});
+			
+			$('.close').on('click', function () {
+				$('.overlay').hide();
+				
+			});
+		});
+	</script>
+	<!-- button-close -->
+
 	<script src="js/wow.min.js"></script>
 	<script>
 		new WOW().init();
 	</script>
+	<!-- Wow -->
 
-	<!-- Slick -->
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script>
 	$(document).ready(function(){
@@ -349,58 +490,59 @@
 			fade: true,
 			arrows: false
 		});
-
+		
 		$('.slider-nav').slick({
 			slidesToShow: 4,
 			slidesToScroll: 1,
-			asNavFor: '.slider-for',
-			centerMode: true,
-			centerPadding: '0px',
-			focusOnSelect: true,
-			arrows: true,
-			prevArrow: '<button class="prev slider-nav__prev"><span class="slider-nav__text">&lt;</span></button>',
-			nextArrow: '<button class="next slider-nav__next"><span class="slider-nav__text">&gt;</span></button>'
-		});
+				asNavFor: '.slider-for',
+				centerMode: true,
+				centerPadding: '0px',
+				focusOnSelect: true,
+				arrows: true,
+				prevArrow: '<button class="prev slider-nav__prev"><span class="slider-nav__text">&lt;</span></button>',
+				nextArrow: '<button class="next slider-nav__next"><span class="slider-nav__text">&gt;</span></button>'
+			});
 
-		$('.slider').slick({
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			infinite: true,
-			// centerMode: true,
-			// centerPadding: '0px',
-			prevArrow: '<button class="prev slider__prev"><img src="img/prev.png" alt="next"></button>',
-			nextArrow: '<button class="next slider__next"><img src="img/next.png" alt="next"></button>',
-			responsive: [
-										{
-											breakpoint: 992,
-											settings: {
-												slidesToShow: 2,
-												slidesToScroll: 1,
-												infinite: true,
-												arrows: true
+			$('.slider').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				infinite: true,
+				// centerMode: true,
+				// centerPadding: '0px',
+				prevArrow: '<button class="prev slider__prev"><img src="img/prev.png" alt="next"></button>',
+				nextArrow: '<button class="next slider__next"><img src="img/next.png" alt="next"></button>',
+				responsive: [
+					{
+						breakpoint: 992,
+						settings: {
+							slidesToShow: 2,
+													slidesToScroll: 1,
+													infinite: true,
+													arrows: true
+												}
+											},
+											{
+												breakpoint: 768,
+												settings: {
+													slidesToShow: 2,
+													slidesToScroll: 1,
+													infinite: true,
+													arrows: false
+												}
+											},
+											{
+												breakpoint: 576,
+												settings: {
+													slidesToShow: 1,
+													slidesToScroll: 1,
+													infinite: true,
+													arrows: false
+												}
 											}
-										},
-										{
-											breakpoint: 768,
-											settings: {
-												slidesToShow: 2,
-												slidesToScroll: 1,
-												infinite: true,
-												arrows: false
-											}
-										},
-										{
-											breakpoint: 576,
-											settings: {
-												slidesToShow: 1,
-												slidesToScroll: 1,
-												infinite: true,
-												arrows: false
-											}
-										}
-									]
+										]
+			});
 		});
-	});
 	</script>
+	<!-- Slick -->
 </body>
 </html>

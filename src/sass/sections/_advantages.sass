@@ -21,25 +21,6 @@
 		padding: 2.8rem 1.9rem 2.8rem 0
 		margin-bottom: 3rem
 
-		&::before
-			content: url("../img/advantages/production.png")
-			align-self: center
-
-	&__item_samples::before
-		content: url("../img/advantages/samples.png")
-
-	&__item_quality::before
-		content: url("../img/advantages/quality.png")
-
-	&__item_stockpile::before
-		content: url("../img/advantages/stockpile.png")
-
-	&__item_print::before
-		content: url("../img/advantages/print.png")
-
-	&__item_supplement::before
-		content: url("../img/advantages/saupplement.png")
-
 	&__text
 		max-width: 20.2rem
 		margin-left: 1.1rem
@@ -53,3 +34,42 @@
 		font-size: 1.4rem
 		font-weight: 300
 		margin: 0
+
+.advantages__item::before
+	align-self: center
+
+.no-webp .advantages__item::before
+	content: url("../img/advantages/production.png")
+
+.webp .advantages__item::before
+	content: url("../img/advantages/production.webp")
+
+.no-webp .advantages__item_samples::before
+	content: url("../img/advantages/samples.png")
+
+.webp .advantages__item_samples::before
+	content: url("../img/advantages/samples.webp")
+
+.no-webp .advantages__item_quality::before
+	content: url("../img/advantages/quality.png")
+
+.webp .advantages__item_quality::before
+	content: url("../img/advantages/quality.webp")
+
+.no-webp .advantages__item_stockpile::before
+	content: url("../img/advantages/stockpile.png")
+
+.webp .advantages__item_stockpile::before
+	content: url("../img/advantages/stockpile.webp")
+
+.no-webp .advantages__item_print::before
+	content: url("../img/advantages/print.png")
+
+.webp .advantages__item_print::before
+	content: url("../img/advantages/print.webp")
+
+.no-webp .advantages__item_saupplement::before
+	content: url("../img/advantages/saupplement.png")
+
+.webp .advantages__item_saupplement::before
+	content: url("../img/advantages/saupplement.webp")
