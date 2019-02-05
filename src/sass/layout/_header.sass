@@ -1,0 +1,45 @@
+.header
+	margin-top: 4.4rem
+
+	&__content
+		display: flex
+		min-height: 9rem
+		justify-content: space-between
+		align-items: center
+
+	&__contacts
+		display: flex
+		align-items: center
+		font-style: normal
+
+	&__address
+		display: flex
+		align-items: center
+		font-style: normal
+
+	&__number
+		font-size: 2.2rem
+		text-transform: uppercase
+		color: $text-color-dark
+		margin-right: 2.7rem
+
+		&:first-child
+			padding-right: 1.3rem
+			border-right: 0.1rem solid #cfcfd0
+			margin-right: 1.3rem
+
+	&__btn
+		display: flex
+		justify-content: center
+		align-items: center
+		
+.header__btn::before
+	height: 2rem
+	width: 2rem
+	margin-right: 0.7rem
+
+.no-webp .header__btn::before
+	content: url('../img/header/telephone.png')
+
+.webp .header__btn::before
+	content: url('../img/header/telephone.webp')

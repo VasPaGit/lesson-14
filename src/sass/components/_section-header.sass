@@ -1,0 +1,23 @@
+.section-header
+	text-align: center
+
+	&__title
+		font-size: 2.7rem
+		font-weight: 700
+		text-transform: uppercase
+		color: $text-color-dark
+		margin: 0
+
+.section-header__title::after
+	content: ''
+	display: block
+	height: 0.6rem
+	margin-top: 1.2rem
+	background-position: center
+	background-repeat: no-repeat
+
+.no-webp .section-header__title::after
+	background-image: url(../img/line.png)
+
+.webp .section-header__title::after
+	background-image: url(../img/line.webp)

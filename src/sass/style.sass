@@ -1,43 +1,31 @@
-// global
-@import 'global/variables';
-@import 'global/animates';
+// base
+@import 'base/settings';
+@import 'base/container';
 
-*, *::after, *::before
-	box-sizing: border-box
+// abstracts
+@import 'abstracts/animates';
+@import 'abstracts/brownout';
+@import 'abstracts/overlay';
+@import 'abstracts/variables';
 
-html
-	font-size: 0.625em
+// components
+@import 'components/labels';
+@import 'components/input';
+@import 'components/buttons';
+@import 'components/logo';
+@import 'components/note';
+@import 'components/section-header';
+@import 'components/about-us';
+@import 'components/popups';
+@import 'components/sliders';
 
-body
-	font-family: 'Roboto', sans-serif
-	margin: 0
-
-// forms
-@import 'forms/forms';
-@import 'forms/labels';
-@import 'forms/input';
-@import 'forms/buttons';
-
-// modals
-@import 'modals/brownout';
-@import 'modals/container';
-@import 'modals/overlay';
-@import 'modals/popups';
-@import 'modals/sliders';
-
-// blocks
-@import 'blocks/logo';
-@import 'blocks/note';
-@import 'blocks/section-header';
-@import 'blocks/about-us';
-
-// sections
-@import 'sections/menu';
-@import 'sections/header';
-@import 'sections/application';
-@import 'sections/advantages';
-@import 'sections/produce';
-@import 'sections/offer';
-@import 'sections/production';
-@import 'sections/buyers';
-@import 'sections/feedback';
+// layout
+@import 'layout/menu';
+@import 'layout/header';
+@import 'layout/application';
+@import 'layout/advantages';
+@import 'layout/produce';
+@import 'layout/offer';
+@import 'layout/production';
+@import 'layout/buyers';
+@import 'layout/feedback';
