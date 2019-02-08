@@ -1,6 +1,23 @@
 .logo
 	height: 6.1rem
 	width: 19.1rem
-	background: url(../img/logo.png) center no-repeat
+	background-position: center
+	background-repeat: no-repeat
+
+	@media screen and (max-width: 576px)
+		height: 3.5rem
+		width: 3.5rem
+		background-color: $active-color
+		border-radius: 0.4rem
+	
+.no-webp .logo
+	background-image: url(../img/logo.png)
+
+	@media screen and (max-width: 576px)
+		background-image: url(../img/logo-mobile.png)
+
+.webp .logo
 	background-image: url(../img/logo.webp)
-	background-size: 100%
+
+	@media screen and (max-width: 576px)
+		background-image: url(../img/logo-mobile.webp)

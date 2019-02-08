@@ -2,39 +2,56 @@
 	position: fixed
 	top: 0
 	left: 0
-	height: 4.4rem
 	width: 100%
 	background-color: $menu_bg-color
 	z-index: 99
 
+	@media screen and (max-width: 640px)
+		display: none
+
 	&__list
 		display: flex
 		justify-content: center
-		align-items: center
-		height: inherit
+		flex-flow: row wrap
 		margin: 0
 		padding: 0
 		list-style: none
 
-	&__item
-		height: 2.5rem
-		font-size: 1.2rem
-		font-weight: 400
-		text-transform: uppercase
-		color: #fff
-
 	&__text
 		display: flex
 		align-items: center
-		height: inherit
+		height: 4.4rem
+		font-size: 1.2rem
+		font-weight: 400
+		text-transform: uppercase
 		text-decoration: none
 		color: #fff
-		padding: 0 1.45rem
-		border-right: 0.1rem dotted rgba(255,255,255,0.2)
+
+		@media screen and (max-width: 975px)
+			height: 3.2rem
+
+		span
+			height: 2.5rem
+			display: flex
+			align-items: center
+			padding: 0 1.45rem
+			border-right: 0.1rem dotted rgba(255,255,255,0.2)
+			border-left: 0.1rem dotted rgba(255,255,255,0.2)
 
 	&__first-text
-		padding-left: 0
+		span
+			padding-left: 0
+			border-left: 0
+
+			@media screen and (max-width: 948px)
+				padding-left: 1.45rem
+				border-left: 0.1rem dotted rgba(255,255,255,0.2)
 
 	&__last-text
-		padding-right: 0
-		border: 0
+		span
+			padding-right: 0
+			border-right: 0
+
+			@media screen and (max-width: 948px)
+				padding-right: 1.45rem
+				border-right: 0.1rem dotted rgba(255,255,255,0.2)

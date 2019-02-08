@@ -18,33 +18,28 @@
 	<!-- script -->
 </head>
 <body>
-	<nav class="menu hidden-mobile">
+	<nav class="menu">
 		<div class="container">
 			<ul class="menu__list">
-				<li class="menu__item"><a class="menu__text menu__first-text" href="#application">О компании</a></li>
-				<li class="menu__item"><a class="menu__text" href="#advantages">Преимущества</a></li>
-				<li class="menu__item"><a class="menu__text" href="#production">Производство</a></li>
-				<li class="menu__item"><a class="menu__text" href="#offer">Склад</a></li>
-				<li class="menu__item"><a class="menu__text" href="#produce">Продукция</a></li>
-				<li class="menu__item"><a class="menu__text" href="#buyers">Наши клиенты</a></li>
-				<li class="menu__item"><a class="menu__text" href="#certificat">Сертификаты</a></li>
-				<li class="menu__item"><a class="menu__text" href="#feedback">Отзывы</a></li>
-				<li class="menu__item"><a class="menu__text menu__last-text" href="#contacts">Контакты</a></li>
+				<li class="menu__item"><a class="menu__text menu__first-text" href="#application"><span>О компании</span></a></li>
+				<li class="menu__item"><a class="menu__text" href="#advantages"><span>Преимущества</span></a></li>
+				<li class="menu__item"><a class="menu__text" href="#production"><span>Производство</span></a></li>
+				<li class="menu__item"><a class="menu__text" href="#offer"><span>Склад</span></a></li>
+				<li class="menu__item"><a class="menu__text" href="#produce"><span>Продукция</span></a></li>
+				<li class="menu__item"><a class="menu__text" href="#buyers"><span>Наши клиенты</span></a></li>
+				<li class="menu__item"><a class="menu__text" href="#certificat"><span>Сертификаты</span></a></li>
+				<li class="menu__item"><a class="menu__text" href="#feedback"><span>Отзывы</span></a></li>
+				<li class="menu__item"><a class="menu__text menu__last-text" href="#contacts"><span>Контакты</span></a></li>
 			</ul>
 			<!-- /.menu__list -->
 		</div>
 		<!-- /.container -->
 	</nav>
-	<!-- /.menu hidden-mobile -->
+	<!-- /.menu -->
 
 	<header class="header">
 		<div class="container header__content">
-			<a class="logo-wrapper" href="#">
-				<picture>
-					<source class="logo" srcset="img/logo.webp" type="image/webp">
-					<img class="logo" src="img/logo.png" alt="Логотип сайта "Добрый картон"">
-				</picture>
-			</a>
+			<a class="logo" href="#"></a>
 
 			<div class="header__contacts">
 				<address class="header__address">
@@ -61,9 +56,9 @@
 
 	<section class="application brownout" id="application">
 		<div class="container application__content">
-			<a class="application__img-wrap myFadeInUp hidden-mobile" href="#">
-				<picture>
-					<source class="application__img" srcset="img/application/boxes.webp" type="image/webp">
+			<a class="application__img-wrap" href="#">
+				<picture  class="myFadeInUp">
+					<source srcset="img/application/boxes.webp" type="image/webp">
 					<img class="application__img" src="img/application/boxes.png" alt="Гора каробк">
 				</picture>
 			</a>
@@ -216,8 +211,8 @@
 						<button class="btn produce__btn">Получить расчет</button>
 					</div>
 					<!-- /.form -->
-				</div>
-				<!-- /.produce-block -->
+				</li>
+				<!-- /.produce-item -->
 			</ul>
 			<!-- /.produce-list -->
 		</div>
@@ -277,7 +272,7 @@
 					</picture>
 				</div>
 
-				<div class="slider-nav hidden-mobile">
+				<div class="slider-nav">
 					<picture  class="slider-nav__img-wrapper">
 						<source srcset="img/production/img-1.webp" type="image/webp">
 						<img class="slider-nav__img" src="img/production/img-1.jpg" alt="Слайд 1">
@@ -548,66 +543,66 @@
 
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script>
-	$(document).ready(function(){
-		$('.slider-for').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			asNavFor: '.slider-nav',
-			fade: true,
-			arrows: false
-		});
-		
-		$('.slider-nav').slick({
-			slidesToShow: 4,
-			slidesToScroll: 1,
-				asNavFor: '.slider-for',
-				centerMode: true,
-				centerPadding: '0px',
-				focusOnSelect: true,
-				arrows: true,
-				prevArrow: '<button class="prev slider-nav__prev"><span class="slider-nav__text">&lt;</span></button>',
-				nextArrow: '<button class="next slider-nav__next"><span class="slider-nav__text">&gt;</span></button>'
-			});
-
-			$('.slider').slick({
-				slidesToShow: 3,
+		$(document).ready(function(){
+			$('.slider-for').slick({
+				slidesToShow: 1,
 				slidesToScroll: 1,
-				infinite: true,
-				// centerMode: true,
-				// centerPadding: '0px',
-				prevArrow: '<button class="prev slider__prev"><img src="img/prev.png" alt="next"></button>',
-				nextArrow: '<button class="next slider__next"><img src="img/next.png" alt="next"></button>',
-				responsive: [
-					{
-						breakpoint: 992,
-						settings: {
-							slidesToShow: 2,
-													slidesToScroll: 1,
-													infinite: true,
-													arrows: true
-												}
-											},
-											{
-												breakpoint: 768,
-												settings: {
-													slidesToShow: 2,
-													slidesToScroll: 1,
-													infinite: true,
-													arrows: false
-												}
-											},
-											{
-												breakpoint: 576,
-												settings: {
-													slidesToShow: 1,
-													slidesToScroll: 1,
-													infinite: true,
-													arrows: false
-												}
-											}
-										]
+				asNavFor: '.slider-nav',
+				fade: true,
+				arrows: false
 			});
-		});
+			
+			$('.slider-nav').slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+					asNavFor: '.slider-for',
+					centerMode: true,
+					centerPadding: '0px',
+					focusOnSelect: true,
+					arrows: true,
+					prevArrow: '<button class="prev slider-nav__prev"><span class="slider-nav__text">&lt;</span></button>',
+					nextArrow: '<button class="next slider-nav__next"><span class="slider-nav__text">&gt;</span></button>'
+				});
+
+				$('.slider').slick({
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+					// centerMode: true,
+					// centerPadding: '0px',
+					prevArrow: '<button class="prev slider__prev"><img src="img/prev.png" alt="next"></button>',
+					nextArrow: '<button class="next slider__next"><img src="img/next.png" alt="next"></button>',
+					responsive: [
+						{
+							breakpoint: 992,
+							settings: {
+								slidesToShow: 2,
+														slidesToScroll: 1,
+														infinite: true,
+														arrows: true
+													}
+												},
+												{
+													breakpoint: 768,
+													settings: {
+														slidesToShow: 2,
+														slidesToScroll: 1,
+														infinite: true,
+														arrows: false
+													}
+												},
+												{
+													breakpoint: 576,
+													settings: {
+														slidesToShow: 1,
+														slidesToScroll: 1,
+														infinite: true,
+														arrows: false
+													}
+												}
+											]
+				});
+			});
 	</script>
 	<!-- Slick -->
 

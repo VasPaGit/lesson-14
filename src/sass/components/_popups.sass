@@ -26,8 +26,9 @@
 
 	&__text
 		padding: 4rem 9rem
-		background: $bg-color-dark url(../img/popup/bg-popup.jpg) center no-repeat
-		background-image: url(../img/popup/bg-popup.webp)
+		background-color: $bg-color-dark
+		background-position: center
+		background-repeat: no-repeat
 		background-size: cover
 
 	&__proposal
@@ -47,3 +48,9 @@
 	&__input
 		text-transform: uppercase
 		margin-right: 1.6rem
+
+.no-webp .popup__text
+	background-image: url(../img/popup/bg-popup.jpg)
+
+.webp .popup__text
+	background-image: url(../img/popup/bg-popup.webp)

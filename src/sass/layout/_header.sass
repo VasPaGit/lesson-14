@@ -1,11 +1,20 @@
 .header
 	margin-top: 4.4rem
 
+	@media screen and (max-width: 975px)
+		margin-top: 6.4rem
+
+	@media screen and (max-width: 640px)
+		margin-top: 0
+
 	&__content
 		display: flex
-		min-height: 9rem
+		height: 9rem
 		justify-content: space-between
 		align-items: center
+
+		@media screen and (max-width: 576px)
+			height: 5.6rem
 
 	&__contacts
 		display: flex
@@ -16,30 +25,59 @@
 		display: flex
 		align-items: center
 		font-style: normal
+		margin-right: 2.7rem
+
+		@media screen and (max-width: 845px)
+			flex-flow: column nowrap
+			margin-right: 1.5rem
 
 	&__number
 		font-size: 2.2rem
 		text-transform: uppercase
 		color: $text-color-dark
-		margin-right: 2.7rem
+
+		@media screen and (max-width: 640px)
+			font-size: 1.4rem
 
 		&:first-child
 			padding-right: 1.3rem
 			border-right: 0.1rem solid #cfcfd0
 			margin-right: 1.3rem
 
+			@media screen and (max-width: 845px)
+				padding: 0
+				border: 0
+				margin: 0
+
+		span
+			@media screen and (max-width: 640px)
+				font-weight: 900
+
 	&__btn
 		display: flex
 		justify-content: center
 		align-items: center
+
+		@media screen and (max-width: 576px)
+			height: 2.7rem
+			width: 2.7rem
+
+		span
+			@media screen and (max-width: 576px)
+				display: none
+
 		
 .header__btn::before
 	height: 2rem
 	width: 2rem
 	margin-right: 0.7rem
 
+
+	@media screen and (max-width: 576px)
+		margin-right: 0
+
 .no-webp .header__btn::before
-	content: url('../img/header/telephone.png')
+	content: url(../img/header/telephone.png)
 
 .webp .header__btn::before
-	content: url('../img/header/telephone.webp')
+	content: url(../img/header/telephone.webp)

@@ -1,6 +1,10 @@
 .produce
 	padding: 5.7rem 0 3.8rem 0
 
+	@media screen and (max-width: 576px)
+		padding-top: 3.2rem
+		width: 100%
+
 	&__header
 		margin-bottom: 2.1rem
 
@@ -11,6 +15,9 @@
 		padding: 0
 		margin: 0
 		list-style: none
+
+		@media screen and (max-width: 576px)
+			justify-content: center
 
 	&__item
 		display: flex
@@ -25,6 +32,10 @@
 		height: 27rem
 		width: 35rem
 		margin-bottom: 2rem
+
+		@media screen and (max-width: 576px)
+			width: 25rem
+			margin-bottom: 1rem
 		
 		img
 			width: 100%
@@ -35,10 +46,22 @@
 		font-size: 2rem
 		font-weight: 500
 		color: $text-color-dark
-		margin: 0 0 2.8rem 0
+		margin-bottom: 2.8rem
+
+		@media screen and (max-width: 576px)
+			font-size: 1.8rem
+			margin-bottom: 1.7rem
 
 	&__form
 		display: flex
+
+	&__btn-o_margin
+		@media screen and (max-width: 576px)
+			width: 16rem
+
+	&__btn-o
+		@media screen and (max-width: 576px)
+			width: 11.9rem
 
 	&__btn-o_margin
 		margin-right: 1.1rem
