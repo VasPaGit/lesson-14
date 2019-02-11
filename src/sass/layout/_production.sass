@@ -1,7 +1,7 @@
 .production
 	padding: 8.7rem 0 4.8rem 0
 
-	@media screen and (max-width: 576px)
+	@media screen and (max-width: 640px)
 		padding: 2.8rem 0
 
 	&__wrapper
@@ -9,22 +9,26 @@
 		flex-flow: row nowrap
 		justify-content: space-between
 
-		@media screen and (max-width: 576px)
+		@media screen and (max-width: 640px)
 			flex-flow: column nowrap
 
 	&__slider
-		flex-shrink: 1
+		width: 57.21925133689839572192513368984%
 		display: flex
 		flex-flow: column nowrap
 		align-items: center
-		margin-right: 2.5rem
+		padding-right: 2.5rem
 
-		@media screen and (max-width: 576px)
+		@media screen and (max-width: 640px)
 			order: 2
-			margin: 0
+			width: 100%
+			padding: 0
 
 	&__content
-		flex-shrink: 1
+		width: 42.78074866310160427807486631016%
+
+		@media screen and (max-width:640px)
+			width: 100%
 
 	&__title
 		font-size: 2.8rem
@@ -34,7 +38,7 @@
 		padding: 1.5rem 0 1.6rem 50%
 		margin: 1.9rem 0 2.8rem -50%
 
-		@media screen and (max-width: 576px)
+		@media screen and (max-width: 640px)
 			text-align: center
 			display: block
 			font-size: 2rem

@@ -449,42 +449,42 @@
 				<div class="slider__item">
 					<picture>
 						<source srcset="img/feedback/img-1.webp" type="image/webp">
-						<img class="sleder__img" src="img/feedback/img-1.jpg" alt="Слайд 1">
+						<img class="slider__img" src="img/feedback/img-1.jpg" alt="Слайд 1">
 					</picture>
 				</div>
 				
 				<div class="slider__item">
 					<picture>
 						<source srcset="img/feedback/img-2.webp" type="image/webp">
-						<img class="sleder__img" src="img/feedback/img-2.jpg" alt="Слайд 2">
+						<img class="slider__img" src="img/feedback/img-2.jpg" alt="Слайд 2">
 					</picture>
 				</div>
 				
 				<div class="slider__item">
 					<picture>
 						<source srcset="img/feedback/img-3.webp" type="image/webp">
-						<img class="sleder__img" src="img/feedback/img-3.jpg" alt="Слайд 3">
+						<img class="slider__img" src="img/feedback/img-3.jpg" alt="Слайд 3">
 					</picture>
 				</div>
 				
 				<div class="slider__item">
 					<picture>
 						<source srcset="img/feedback/img-1.webp" type="image/webp">
-						<img class="sleder__img" src="img/feedback/img-1.jpg" alt="Слайд 1">
+						<img class="slider__img" src="img/feedback/img-1.jpg" alt="Слайд 1">
 					</picture>
 				</div>
 			
 				<div class="slider__item">
 					<picture>
 						<source srcset="img/feedback/img-2.webp" type="image/webp">
-						<img class="sleder__img" src="img/feedback/img-2.jpg" alt="Слайд 2">
+						<img class="slider__img" src="img/feedback/img-2.jpg" alt="Слайд 2">
 					</picture>
 				</div>
 			
 				<div class="slider__item">
 					<picture>
 						<source srcset="img/feedback/img-3.webp" type="image/webp">
-						<img class="sleder__img" src="img/feedback/img-3.jpg" alt="Слайд 3">
+						<img class="slider__img" src="img/feedback/img-3.jpg" alt="Слайд 3">
 					</picture>
 				</div>
 			</div>
@@ -549,7 +549,17 @@
 				slidesToScroll: 1,
 				asNavFor: '.slider-nav',
 				fade: true,
-				arrows: false
+				arrows: false,
+				responsive: [
+					{
+						breakpoint: 640,
+						settings: {
+							arrows: true,
+							prevArrow: '<button class="prev slider-for__prev"><span class="slider-for__text">&lt;</span></button>',
+							nextArrow: '<button class="next slider-for__next"><span class="slider-for__text">&gt;</span></button>'
+						}
+					}
+				]
 			});
 			
 			$('.slider-nav').slick({
@@ -573,34 +583,34 @@
 					prevArrow: '<button class="prev slider__prev"><img src="img/prev.png" alt="next"></button>',
 					nextArrow: '<button class="next slider__next"><img src="img/next.png" alt="next"></button>',
 					responsive: [
-						{
-							breakpoint: 992,
-							settings: {
-								slidesToShow: 2,
-														slidesToScroll: 1,
-														infinite: true,
-														arrows: true
-													}
-												},
-												{
-													breakpoint: 768,
-													settings: {
-														slidesToShow: 2,
-														slidesToScroll: 1,
-														infinite: true,
-														arrows: false
-													}
-												},
-												{
-													breakpoint: 576,
-													settings: {
-														slidesToShow: 1,
-														slidesToScroll: 1,
-														infinite: true,
-														arrows: false
-													}
-												}
-											]
+												// {
+												// 	breakpoint: 900,
+												// 	settings: {
+												// 		slidesToShow: 2,
+												// 		slidesToScroll: 1,
+												// 		infinite: true,
+												// 		arrows: true
+												// 	}
+												// },
+												// {
+												// 	breakpoint: 768,
+												// 	settings: {
+												// 		slidesToShow: 2,
+												// 		slidesToScroll: 1,
+												// 		infinite: true,
+												// 		arrows: false
+												// 	}
+												// },
+												// {
+												// 	breakpoint: 576,
+												// 	settings: {
+												// 		slidesToShow: 1,
+												// 		slidesToScroll: 1,
+												// 		infinite: true,
+												// 		arrows: false
+												// 	}
+												// }
+					]
 				});
 			});
 	</script>
