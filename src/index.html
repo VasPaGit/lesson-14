@@ -15,7 +15,6 @@
 	<script>
 		document.documentElement.classList.remove("no-webp");
 	</script>
-	<!-- script -->
 </head>
 <body>
 	<nav class="menu">
@@ -482,6 +481,44 @@
 	</section>
 	<!-- /.feedback -->
 
+	<div class="contacts">
+		<div id="map" class="contacts__map"></div>
+
+		<address class="contacts-block">
+			<div class="contacts-block__address contacts-block__item">
+				<p class="contacts-block__text">
+					<span class="contacts-block__title">Адрес офиса</span>
+					г. Уфа, Проспект октября, 46
+				</p>
+
+				<p class="contacts-block__text">
+					<span class="contacts-block__title">Адрес склада</span>
+					г. Уфа, ул. Майкопская, 65/2
+				</p>
+			</div>
+
+			<div class="contacts-block__phone contacts-block__item">
+				<p class="contacts-block__text">
+					<span class="contacts-block__title">Тел. отдела продаж:</span>
+					<a class="contacts-block__link" href="tel:+83472715428">8 (347) 271-54-28</a>
+					<a class="contacts-block__link contacts-block__link_margin" href="tel:+89373633000">8 (937) 363-30-00</a>
+				</p>
+
+				<button class="btn contacts-block__btn">Заказать звонок</button>
+			</div>
+
+			<div class="contacts-block__mail contacts-block__item">
+				<div class="contacts-block__text">
+					<span class="contacts-block__title">Е-mail</span>
+					urals.karton@gmail.com
+				</div>
+			</div>
+			<!-- /.contacts-block__mail -->
+		</address>
+		<!-- /.contacts-block -->
+	</div>
+	<!-- /.contacts -->
+
 	<div class="overlay">
 		<div class="popup">
 			<header class="popup__header">
@@ -562,27 +599,27 @@
 					nextArrow: '<button class="next slider-nav__next"><span class="slider-nav__text">&gt;</span></button>'
 				});
 
-				$('.slider').slick({
-					slidesToShow: 3,
-					slidesToScroll: 1,
-					infinite: true,
-					prevArrow: '<button class="prev slider__prev"><img src="img/prev.png" alt="next"></button>',
-					nextArrow: '<button class="next slider__next"><img src="img/next.png" alt="next"></button>',
-					responsive: [
-												{
-													breakpoint: 800,
-													settings: {
-														slidesToShow: 2
-													}
-												},
-												{
-													breakpoint: 576,
-													settings: {
-														slidesToShow: 1,
-														prevArrow: '<button class="prev active-btn__prev"><span class="slider-for__text">&lt;</span></button>',
-														nextArrow: '<button class="next active-btn__next"><span class="slider-for__text">&gt;</span></button>'
-													}
+			$('.slider').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				infinite: true,
+				prevArrow: '<button class="prev slider__prev"><img src="img/prev.png" alt="next"></button>',
+				nextArrow: '<button class="next slider__next"><img src="img/next.png" alt="next"></button>',
+				responsive: [
+											{
+												breakpoint: 800,
+												settings: {
+													slidesToShow: 2
 												}
+											},
+											{
+												breakpoint: 576,
+												settings: {
+													slidesToShow: 1,
+													prevArrow: '<button class="prev active-btn__prev"><span class="slider-for__text">&lt;</span></button>',
+													nextArrow: '<button class="next active-btn__next"><span class="slider-for__text">&gt;</span></button>'
+												}
+											}
 					]
 				});
 			});
@@ -594,5 +631,32 @@
 		objectFitImages();
 	</script>
 	<!-- object-fit-images -->
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=<b1ca462e-0ff0-47eb-bbd7-5c3ecb1965b9>&lang=ru_RU" type="text/javascript"></script>
+	<script type="text/javascript">
+		ymaps.ready(init);
+		function init() {
+			var myMap = new ymaps.Map("map", {
+				center: [54.755553, 55.897349],
+				zoom: 12,
+				scroll: false
+			});
+
+			myMap.controls.remove('geolocationControl').remove('searchControl').remove('routeButton').remove('rulerControl').remove('fullscreenControl').remove('typeSelector').remove('trafficControl');
+
+			myMap.behaviors.disable([
+				'scrollZoom'
+			]);
+
+			var placemark = new ymaps.Placemark([54.752656, 56.002053], {}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/maps.png',
+				iconImageSize: [48, 48],
+				iconImageOffset: [-24, -48]
+			});
+
+			myMap.geoObjects.add(placemark);
+		}
+	</script>
 </body>
 </html>

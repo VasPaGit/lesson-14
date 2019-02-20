@@ -1,0 +1,61 @@
+.contacts-block
+	position: absolute
+	top: 7.3rem
+	left: 15%
+	display: inline-flex
+	flex-direction: column
+	font-style: normal
+	background-color: #fff
+	padding: 3.3rem	4rem 3.9rem 6rem
+	border: 0.1rem solid rgba(0, 0, 0, 0.1)
+
+	&__item
+		position: relative
+		
+
+		&::before
+			content: ''
+			position: absolute
+			top: 0.4rem
+			left: -3rem
+			display: inline-block
+			height: 2.5rem
+			width: 2.5rem
+			background-size: 100% auto
+			background-repeat: no-repeat
+
+	&__address
+		margin-bottom: 2.8rem
+
+		&::before
+			background-image: url(../img/contacts/map-marker.svg)
+
+	&__phone
+		margin-bottom: 2.2rem
+
+		&::before
+			background-image: url(../img/contacts/smartphone.svg)
+
+	&__text
+		display: flex
+		flex-direction: column
+		font-size: 1.6rem
+		font-weight: 300
+		line-height: 2.5rem
+		color: $text-color-dark
+
+	&__title
+		font-size: 1.8rem
+		font-weight: 700
+
+	&__link
+		text-decoration: none
+		color: $text-color-dark
+
+	&__link_margin
+		margin-bottom: 1rem
+
+	&__mail
+		&::before
+			width: 2rem
+			background-image: url(../img/contacts/envelope.svg)
