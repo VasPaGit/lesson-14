@@ -482,40 +482,46 @@
 	<!-- /.feedback -->
 
 	<div class="contacts">
-		<div id="map" class="contacts__map"></div>
-
-		<address class="contacts-block">
-			<div class="contacts-block__address contacts-block__item">
-				<p class="contacts-block__text">
-					<span class="contacts-block__title">Адрес офиса</span>
-					г. Уфа, Проспект октября, 46
-				</p>
-
-				<p class="contacts-block__text">
-					<span class="contacts-block__title">Адрес склада</span>
-					г. Уфа, ул. Майкопская, 65/2
-				</p>
-			</div>
-
-			<div class="contacts-block__phone contacts-block__item">
-				<p class="contacts-block__text">
-					<span class="contacts-block__title">Тел. отдела продаж:</span>
-					<a class="contacts-block__link" href="tel:+83472715428">8 (347) 271-54-28</a>
-					<a class="contacts-block__link contacts-block__link_margin" href="tel:+89373633000">8 (937) 363-30-00</a>
-				</p>
-
-				<button class="btn contacts-block__btn">Заказать звонок</button>
-			</div>
-
-			<div class="contacts-block__mail contacts-block__item">
-				<div class="contacts-block__text">
-					<span class="contacts-block__title">Е-mail</span>
-					urals.karton@gmail.com
+		<!-- <div class="container contacts__container"> -->
+			<header class="section-header contacts__header">
+				<h2 class="section-header__title">Контакты</h2>
+			</header>
+	
+			<address class="contacts-block">
+				<div class="contacts-block__address contacts-block__item">
+					<p class="contacts-block__text">
+						<span class="contacts-block__title">Адрес офиса</span>
+						г. Уфа, Проспект октября, 46
+					</p>
+	
+					<p class="contacts-block__text">
+						<span class="contacts-block__title">Адрес склада</span>
+						г. Уфа, ул. Майкопская, 65/2
+					</p>
 				</div>
-			</div>
-			<!-- /.contacts-block__mail -->
-		</address>
-		<!-- /.contacts-block -->
+	
+				<div class="contacts-block__phone contacts-block__item">
+					<p class="contacts-block__text">
+						<span class="contacts-block__title">Тел. отдела продаж:</span>
+						<a class="contacts-block__link" href="tel:+83472715428">8 (347) 271-54-28</a>
+						<a class="contacts-block__link contacts-block__link_margin" href="tel:+89373633000">8 (937) 363-30-00</a>
+					</p>
+	
+					<button class="btn contacts-block__btn">Заказать звонок</button>
+				</div>
+	
+				<div class="contacts-block__mail contacts-block__item">
+					<div class="contacts-block__text">
+						<span class="contacts-block__title">Е-mail</span>
+						urals.karton@gmail.com
+					</div>
+				</div>
+			</address>
+	
+			<div id="map" class="contacts__map"></div>
+			<!-- /.contacts__map -->
+		<!-- </div> -->
+		<!-- /.container contacts__container -->
 	</div>
 	<!-- /.contacts -->
 
@@ -637,9 +643,8 @@
 		ymaps.ready(init);
 		function init() {
 			var myMap = new ymaps.Map("map", {
-				center: [54.755553, 55.897349],
-				zoom: 12,
-				scroll: false
+				center: [54.752656, 56.002053],
+				zoom: 12
 			});
 
 			myMap.controls.remove('geolocationControl').remove('searchControl').remove('routeButton').remove('rulerControl').remove('fullscreenControl').remove('typeSelector').remove('trafficControl');
@@ -658,5 +663,6 @@
 			myMap.geoObjects.add(placemark);
 		}
 	</script>
+	<!-- map -->
 </body>
 </html>
