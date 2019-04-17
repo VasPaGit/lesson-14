@@ -66,7 +66,7 @@ body {
 
 .brownout {
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 
 .brownout::before {
@@ -129,6 +129,7 @@ body {
   border: 0;
   border-radius: 0.5rem;
   padding: 0;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 576px) {
@@ -283,41 +284,68 @@ body {
 
 .popup {
   position: fixed;
-  text-align: center;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  width: 75rem;
+  max-width: 75rem;
+  width: 100%;
+  text-align: center;
   color: #fff;
   background-color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .popup__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 7rem;
   background-color: #ff9d00;
 }
 
+@media screen and (max-width: 576px) {
+  .popup__header {
+    min-height: 5rem;
+  }
+}
+
 .popup__title {
-  min-height: 7rem;
   margin: 0;
   font-size: 2.1rem;
   font-weight: 500;
   text-transform: uppercase;
-  line-height: 7rem;
+}
+
+@media screen and (max-width: 576px) {
+  .popup__title {
+    font-size: 1.8rem;
+  }
 }
 
 .popup__close {
   position: absolute;
-  top: -3rem;
-  right: -2rem;
+  top: 0;
+  right: 1rem;
 }
 
 .popup__text {
-  padding: 4rem 9rem;
   background-color: #1b1b1b;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 4rem 9rem;
+}
+
+@media screen and (max-width: 576px) {
+  .popup__text {
+    padding: 3rem 5rem;
+  }
 }
 
 .popup__proposal {
@@ -326,12 +354,20 @@ body {
   margin: 0 0 2.3rem 0;
 }
 
+@media screen and (max-width: 576px) {
+  .popup__proposal {
+    font-size: 2.4rem;
+  }
+}
+
 .popup__proposal-sub {
   font-size: 2.4rem;
 }
 
-.popup__form {
-  margin-bottom: 1rem;
+@media screen and (max-width: 576px) {
+  .popup__proposal-sub {
+    font-size: 1.8rem;
+  }
 }
 
 .popup__label {
@@ -339,8 +375,14 @@ body {
 }
 
 .popup__input {
+  max-width: 36.5rem;
+  width: 100%;
   text-transform: uppercase;
-  margin-right: 1.6rem;
+  margin: 0 1.6rem 1rem 0;
+}
+
+.popup__btn {
+  margin-bottom: 1rem;
 }
 
 .no-webp .popup__text {
@@ -1098,20 +1140,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-@media screen and (max-width: 640px) {
-  .advantages__list {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
 }
 
 .advantages__item {
@@ -1541,19 +1574,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 0;
   margin: 0;
-}
-
-@media screen and (max-width: 576px) {
-  .buyers__list {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
 }
 
 .buyers__item {
